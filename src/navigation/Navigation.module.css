@@ -1,4 +1,6 @@
-.header {
-    height: 80px;
-    background-color: rgba(123, 173, 227, 0);
+.navigation {
+   border: 1px solid white;
+   display: flex;
+   width: 300px;
+   justify-content: space-around;
 }
