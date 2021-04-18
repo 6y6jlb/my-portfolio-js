@@ -4,6 +4,7 @@ import Main from "./main/Main";
 import Skills from "./skills/Skills";
 import MyProjects from "./myProjects/MyProjects";
 import RemoteJob from "./skills/remoteJob/RemoteJob";
+import Contacts from "./contacts/Contacts";
 
 const App = () => {
   return (
@@ -13,6 +14,7 @@ const App = () => {
           <Skills/>
           <MyProjects/>
           <RemoteJob/>
+          <Contacts/>
       </div>
   );
 }
