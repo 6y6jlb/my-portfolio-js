@@ -1,5 +1,5 @@
 import style from './RemoteJob.module.css'
-import containerStyle from '../../common/styles/Container.module.css'
+import containerStyle from '../common/styles/Container.module.css'
 
 const RemoteJob = () =>{
     return (
