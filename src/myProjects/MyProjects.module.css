@@ -1,8 +1,9 @@
 .projectsBlock {
-    height: 80vh;
+    height: max-content;
     background-color: #e7c7ea;
 }
 .container {
+    min-height: 70vh;
     height: 100%;
     align-items: center;
     justify-content: space-evenly;
@@ -19,4 +20,5 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+
 }

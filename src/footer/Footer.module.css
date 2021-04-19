@@ -1,0 +1,35 @@
+
+.footerFrame {
+    background-color: #dbb69a;
+    min-height: 20vh;
+    display: flex;
+    align-items: center;
+}
+.container {
+    min-height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.title {
+    margin: 0;
+    background-color:  #a8adb4;
+}
+.insideContainer{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+}
+.first {
+    width: 30px;
+    height: 30px;
+    background-color: #a8adb4;
+}
+.second {
+    width: 30px;
+    height: 30px;
+    background-color: #4d5663;
+}
+.lowSpan {
+    background-color:  #a8adb4;
+}
