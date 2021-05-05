@@ -1,24 +1,28 @@
+@import './src/common/styles/sass/variables';
 .projectsBlock {
-    height: max-content;
-    background-color: #e7c7ea;
-}
-.container {
-    min-height: 70vh;
+  height: max-content;
+  background-color: $bgFirstColor;
+
+  .container {
+    min-height: 90vh;
     height: 100%;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
+
+    .title {
+      background-color: $bgSecondColor;
+    }
+
+    .projects {
+      width: 100%;
+      height: max-content;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+
+    }
+  }
+
 }
 
-.title{
-    background-color: #b3b8c1;
-}
-
-.projects {
-    width: 100%;
-    height: max-content;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-
-}

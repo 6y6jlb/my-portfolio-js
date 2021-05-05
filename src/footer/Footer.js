@@ -1,11 +1,12 @@
-import style from './Footer.module.css'
-import containerStyle from '../common/styles/Container.module.css'
+import style from './Footer.module.scss'
+import containerStyle from '../common/styles/Container.module.scss'
+import Title from "../common/components/title/Title";
 
 const Footer = (props) => {
     return (
         <div className={style.footerFrame}>
             <div className={`${containerStyle.mainContainer} ${style.container}`}>
-                <h3 className={style.title}>full name</h3>
+                <Title even={false} title={'full name'}/>
                 <div className={style.insideContainer}>
                     <div className={style.first}></div>
                     <div className={style.second}></div>

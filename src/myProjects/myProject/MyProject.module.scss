@@ -1,26 +1,32 @@
+@import './src/common/styles/sass/variables';
 .project {
-    background-color: #b262ba;
-    width: 300px;
-    margin: 5px;
+  background-color: $bgSecondColor;
+  width: 300px;
+  margin: 5px;
 
-}
-.image {
+  .image {
     background-color: #bab8b8;
     width: 100%;
     height: 250px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.button {
-    text-transform: capitalize;
-    background-color: #500e57;
-    color: white;
-}
-.descriptionBlock {
+
+    .button {
+      text-transform: capitalize;
+      background-color: #500e57;
+      color: white;
+    }
+
+  }
+
+  .descriptionBlock {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+  }
+
 }
+

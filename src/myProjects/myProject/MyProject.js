@@ -1,4 +1,4 @@
-import style from './MyProject.module.css'
+import style from './MyProject.module.scss'
 
 
 const MyProject = (props)=> {

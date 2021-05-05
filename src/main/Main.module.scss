@@ -1,16 +1,46 @@
+@import '../common/styles/sass/variables';
 .mainBlock {
     height: 100vh;
-    background-color: #ecd2d9;
+    background-color: $bgFirstColor;
+
+    .container {
+        justify-content: space-evenly;
+        .textBlock {
+            width: 500px;
+            height: max-content;
+            min-height: 150px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            letter-spacing: 1px;
+            line-height: 22pt;
+
+            h1,span,p{
+                color: $textThirdColor;
+                font-weight: 100;
+                letter-spacing: 1.5pt;
+                font-size: 10px;
+            }
+            h1 {
+                font-family: $fontMainTitle;
+                font-weight: bold;
+                font-size: 22px;
+                word-spacing: 15px;
+
+
+            }
+
+    }
+
+    }
+    .photoBlock {
+        width: 200px;
+        height: 70vh;
+        background-color: $bgSecondColor;
+        opacity: 0.2;
+        position: relative;
+        right: 50px;
+    }
 }
 
-.textBlock {
-    width: 300px;
-    height: max-content;
-    background-color: #f1e3e7;
-}
-
-.photoBlock {
-    width: 300px;
-    height: 70vh;
-    background-color: #f1e3e7;
-}

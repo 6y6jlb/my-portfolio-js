@@ -1,52 +1,58 @@
 .contactsBlock {
-    width: 100%;
-    min-height: 40vh;
-    background-color: #e8e38b;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  min-height: 40vh;
+  background-color: #e8e38b;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-
-}
-.container {
+  .container {
     height: 100%;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-}
-.title {
-    background-color: #a8adb4;
-    width: 150px;
-}
-.form {
-    border: 1px solid black;
-    width: 400px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.textArea {
-    height: 130px;
-}
-.textArea textarea {
 
-}
-.button {
-    background-color: #a8adb4;
-    width: 150px;
-    text-transform: uppercase;
-}
-@media screen and (max-width: 600px) {
+    .title {
+      background-color: #a8adb4;
+      width: 150px;
+    }
+
     .form {
+      border: 1px solid black;
+      width: 400px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @media screen and (max-width: 600px) {
         width: 350px;
-
-    }
-}
-@media screen and (max-width: 450px) {
-    .form {
+      }
+      @media screen and (max-width: 450px) {
         width: 260px;
+      }
+
+      .textArea {
+        height: 130px;
+      }
+
+      .textArea textarea {
+
+      }
 
     }
+
+    .button {
+      background-color: #a8adb4;
+      width: 150px;
+      text-transform: uppercase;
+    }
+  }
+
 }
+
+
+
+
+
+

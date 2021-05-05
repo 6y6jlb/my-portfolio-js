@@ -1,13 +1,14 @@
-import style from './RemoteJob.module.css'
-import containerStyle from '../common/styles/Container.module.css'
+import style from './RemoteJob.module.scss'
+import containerStyle from '../common/styles/Container.module.scss'
+import Title from "../common/components/title/Title";
 
 const RemoteJob = () =>{
     return (
         <div className={style.remoteJobBlock}>
             <div className={`${containerStyle.mainContainer} ${style.container}`}>
+                <Title even={false} title={'remote job'}/>
                 <div className={style.insideWrapper}>
-                    <h3 className={style.askToDeploy}>Options for remote work</h3>
-                    <div className={style.button}> Employ Me</div>
+                    <div className={style.button}> sure</div>
                 </div>
             </div>
         </div>

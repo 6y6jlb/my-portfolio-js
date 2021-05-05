@@ -1,18 +1,35 @@
+@import '../src/common/styles/sass/variables';
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-}
-h2 {
-  margin: 20px 0;
-}
-h3 {
-  margin: 20px 0;
-}
+  font-family: $fontMainTitle;
 
-.App {
-  text-align: start;
-}
-a {
-  color: white;
+  .App {
+    text-align: start;
+
+  }
+
+  h2 {
+    margin: 20px 0;
+  }
+
+  h3 {
+    margin: 20px 0;
+  }
+  h4 {
+    font-family: $fontMainTitle;
+    text-transform: uppercase;
+    font-size: 10pt;
+    margin: 1.33em 0;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 7pt;
+  }
+
+
+  a {
+    color: white;
+  }
+
 }
