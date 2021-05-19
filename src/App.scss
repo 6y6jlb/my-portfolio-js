@@ -4,6 +4,7 @@
   padding: 0;
   margin: 0;
   font-family: $fontMainTitle;
+  color: $textFourColor;
 
   .App {
     text-align: start;
@@ -29,7 +30,16 @@
 
 
   a {
-    color: white;
+  }
+  p {
+    font-family: $fontParagraph;
+    margin-top: 10px;
+    font-size: 10pt;
+    font-weight: 400;
+    letter-spacing: 1px;
+    line-height: 15pt;
+
+
   }
 
 }

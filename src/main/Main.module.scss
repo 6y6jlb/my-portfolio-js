@@ -16,11 +16,14 @@
             letter-spacing: 1px;
             line-height: 22pt;
 
-            h1,span,p{
+            h1,span,h4{
                 color: $textThirdColor;
                 font-weight: 100;
                 letter-spacing: 1.5pt;
                 font-size: 10px;
+            }
+            h4{
+
             }
             h1 {
                 font-family: $fontMainTitle;

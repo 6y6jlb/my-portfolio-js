@@ -8,7 +8,7 @@ const RemoteJob = () =>{
             <div className={`${containerStyle.mainContainer} ${style.container}`}>
                 <Title even={false} title={'remote job'}/>
                 <div className={style.insideWrapper}>
-                    <div className={style.button}> sure</div>
+                    <p className={style.description}> yes </p>
                 </div>
             </div>
         </div>

@@ -3,16 +3,18 @@
   height: max-content;
   background-color: $bgFirstColor;
 
+
+
   .container {
     min-height: 90vh;
     height: 100%;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-
-    .title {
-      background-color: $bgSecondColor;
+    h4,p{
+      color: $textThirdColor;
     }
+
 
     .projects {
       width: 100%;
@@ -20,6 +22,7 @@
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
+
 
     }
   }

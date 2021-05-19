@@ -15,7 +15,7 @@ const Main=()=>{
                 <div className={style.textBlock}>
                     <span>Hi there</span>
                     <h1 className={style.title}>I`am frontend developer</h1>
-                    <p> i'am Alex and this is my portfolio</p>
+                    <h4> i'am Alex and this is my portfolio</h4>
                 </div>
                 <div className={style.photoBlock}></div>
             </div>
