@@ -1,18 +1,19 @@
 @import './src/common/styles/sass/variables';
+
 .projectsBlock {
   height: max-content;
-  background-color: $bgFirstColor;
-
+  background-color: $FirstColor;
 
 
   .container {
-    min-height: 90vh;
+    min-height: 600px;
     height: 100%;
     align-items: center;
     justify-content: space-evenly;
     flex-direction: column;
-    h4,p{
-      color: $textThirdColor;
+
+    h4, p {
+      color: $ThirdColor;
     }
 
 

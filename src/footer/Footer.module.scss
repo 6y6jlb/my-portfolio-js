@@ -1,42 +1,46 @@
+@import './src/common/styles/sass/variables';
 
 .footerFrame {
-  background-color: #dbb69a;
-  min-height: 20vh;
+  background-color: $SecondColor;
+  color: $FourColor;
+  min-height: 150px;
   display: flex;
   align-items: center;
 
   .container {
-    min-height: 15vh;
+    min-height: 150px;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 
     .title {
       margin: 0;
-      background-color: #a8adb4;
+      h4 {
+      }
     }
 
     .insideContainer {
-      border: 1px solid black;
+
       display: flex;
       flex-direction: row;
 
       .first {
         width: 30px;
         height: 30px;
-        background-color: #a8adb4;
+        background-color: $SecondColor;
       }
 
       .second {
         width: 30px;
         height: 30px;
-        background-color: #4d5663;
+        background-color: $FirstColor;
       }
 
     }
 
     .lowSpan {
-      background-color: #a8adb4;
+color: $FirstColor;
+
     }
   }
 }

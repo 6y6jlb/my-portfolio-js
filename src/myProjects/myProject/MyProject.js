@@ -6,7 +6,7 @@ const MyProject = (props)=> {
         <div  className={style.project}>
             <div style={props.style} className={style.image}>
                 <div className={style.before}></div>
-                <a className={style.button}>watch</a>
+                <a href={''} className={style.button}>watch</a>
             </div>
             <div className={style.descriptionBlock}>
                 <h4 className={style.projectName}>{props.projectName}</h4>

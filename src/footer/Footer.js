@@ -16,7 +16,7 @@ const Footer = (props) => {
                     <div className={style.second}></div>
                     <div className={style.first}></div>
                 </div>
-                <span className={style.lowSpan}>2021 gimme a job</span>
+                <p className={style.lowSpan}>2021 gimme a job</p>
             </div>
 
         </div>

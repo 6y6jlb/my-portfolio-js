@@ -1,7 +1,7 @@
 @import '../common/styles/sass/variables';
 .mainBlock {
     height: 100vh;
-    background-color: $bgFirstColor;
+    background-color: $FirstColor;
 
     .container {
         justify-content: space-evenly;
@@ -16,15 +16,13 @@
             letter-spacing: 1px;
             line-height: 22pt;
 
-            h1,span,h4{
-                color: $textThirdColor;
+            h1,span, h3{
+                color: $ThirdColor;
                 font-weight: 100;
-                letter-spacing: 1.5pt;
-                font-size: 10px;
+                letter-spacing: 2pt;
+                font-size: 9pt;
             }
-            h4{
 
-            }
             h1 {
                 font-family: $fontMainTitle;
                 font-weight: bold;
@@ -40,7 +38,7 @@
     .photoBlock {
         width: 200px;
         height: 70vh;
-        background-color: $bgSecondColor;
+        background-color: $SecondColor;
         opacity: 0.2;
         position: relative;
         right: 50px;
