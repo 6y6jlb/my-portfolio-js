@@ -2,17 +2,18 @@
 
 .contactsBlock {
   width: 100%;
-  min-height: 400px;
+  //min-height: 400px;
   background-color: $FirstColor;
+  padding: 40px 0;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
 
   .container {
-    min-height: 350px;
+
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
 
     .title {

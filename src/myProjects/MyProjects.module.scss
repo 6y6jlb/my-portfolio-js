@@ -3,10 +3,9 @@
 .projectsBlock {
   height: max-content;
   background-color: $FirstColor;
-
+  padding: 40px 0;
 
   .container {
-    min-height: 600px;
     height: 100%;
     align-items: center;
     justify-content: space-evenly;
