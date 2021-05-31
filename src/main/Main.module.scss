@@ -1,15 +1,21 @@
 @import '../common/styles/sass/variables';
 .mainBlock {
-    height: 100vh;
+   min-height: 100vh;
     background-color: $FirstColor;
-
+    .particles {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        opacity: 0.6;
+    }
     .container {
         justify-content: space-evenly;
         .textBlock {
-            width: 500px;
+            width: 550px;
             height: max-content;
             min-height: 150px;
-
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -22,16 +28,12 @@
                 letter-spacing: 2pt;
                 font-size: 9pt;
             }
-
             h1 {
                 font-family: $fontMainTitle;
                 font-weight: bold;
-                font-size: 22px;
+                font-size: 25pt;
                 word-spacing: 15px;
-
-
             }
-
     }
 
     }

@@ -8,6 +8,14 @@
 
   .App {
     text-align: start;
+    > div {
+      &:nth-child(n) {
+        background-color: $SecondColor;;
+      }
+      &:nth-child(2n) {
+        background-color:$FirstColor;
+      }
+    }
 
   }
 

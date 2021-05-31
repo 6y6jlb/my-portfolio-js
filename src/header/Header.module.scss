@@ -6,4 +6,9 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    position: fixed;
+    z-index: 100500;
+    opacity: 0.9;
+    left: 0;
+    right: 0;
 }
