@@ -2,6 +2,7 @@ import style from './Main.module.scss';
 import containerStyle from '../common/styles/Container.module.scss';
 import bgImage from '../common/assets/img/face.png';
 import Particles from 'react-particles-js';
+import ReactTypingEffect from 'react-typing-effect';
 
 const Main=()=>{
     const bg= {
@@ -127,9 +128,30 @@ const Main=()=>{
             <Particles className={style.particles} params={styleParticles} />
             <div className={`${containerStyle.mainContainer} ${style.container}`}>
                 <div className={style.textBlock}>
+
                     <span>Hi there</span>
-                    <h1 className={style.title}>I`am frontend developer</h1>
-                    <h3> i'am Alex and this is my portfolio</h3>
+                    <h1 className={style.title}>I`am <ReactTypingEffect className={style.test}
+                                                                          text={[' Basalov Alexey'," frontend developer", " react developer",' redux developer',' typescript developer']}
+                                                                          cursorRenderer={cursor => <h1>{cursor}</h1>}
+                                                                          displayTextRenderer={(text, i) => {
+                                                                              return (
+                                                                                  <h1>
+                                                                                      {text.split('').map((char, i) => {
+                                                                                          const key = `${i}`;
+                                                                                          return (
+                                                                                              <span
+                                                                                                  key={key}
+                                                                                              >{char}</span>
+                                                                                          );
+                                                                                      })}
+                                                                                  </h1>
+                                                                              );
+                                                                          }}
+                    /></h1>
+
+                    <h3><ReactTypingEffect
+                        text={["i'am Alex and this is my portfolio", "I am glad to see you here",'Welcome!']}
+                        /> </h3>
                 </div>
                 <div className={style.photoBlock}></div>
             </div>
