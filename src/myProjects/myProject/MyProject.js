@@ -1,8 +1,10 @@
-import style from './MyProject.module.scss'
+import style from './MyProject.module.scss';
+import HeadShake from 'react-reveal/HeadShake';
 
 
 const MyProject = (props)=> {
     return (
+        <HeadShake>
         <div  className={style.project}>
             <div style={props.style} className={style.image}>
                 <div className={style.before}></div>
@@ -13,6 +15,7 @@ const MyProject = (props)=> {
                 <p style={style.description}>{props.description}</p>
             </div>
         </div>
+        </HeadShake>
     )
 }
 export default MyProject;
