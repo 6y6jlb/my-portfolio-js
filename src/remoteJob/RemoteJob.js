@@ -10,6 +10,7 @@ const RemoteJob = () =>{
             <div className={`${containerStyle.mainContainer} ${style.container}`}>
             <Tada>
                 <Title even={false} title={'remote job'}/>
+            <Tada>
                 <div className={style.insideWrapper}>
                     <p className={style.description}> yes </p>
                 </div>
