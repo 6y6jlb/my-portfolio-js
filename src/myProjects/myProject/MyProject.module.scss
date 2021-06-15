@@ -1,7 +1,6 @@
 @import './src/common/styles/sass/variables';
 
 .project {
-
   width: 300px;
   margin: 5px;
 
@@ -13,8 +12,9 @@
     align-items: center;
     background-size: cover;
     position: relative;
-    background-repeat:no-repeat;
-    .before {
+    background-repeat: no-repeat;
+
+    &:before {
       content: '';
       background-color: #000000;
       opacity: 0.7;
@@ -24,13 +24,30 @@
       right: 0;
       bottom: 0;
     }
-
   }
+
   .button {
     z-index: 1;
-    color: $ThirdColor;
+    color: $SecondColor;
     text-transform: lowercase;
+
   }
+
+  .active {
+    font-size: 1.2em;
+    -webkit-box-shadow: -5px -1px 26px 10px $BlueColor;
+    -moz-box-shadow: -5px -1px 26px 10px $BlueColor;
+    box-shadow: -5px -1px 26px 10px $BlueColor;
+
+
+
+    &:before {
+      opacity: 0.3;
+
+    }
+
+  }
+
 
   .descriptionBlock {
     display: flex;
@@ -50,8 +67,9 @@
     line-height: 15pt;
 
 
-
   }
 
 }
+
+
 

@@ -5,9 +5,9 @@ import HeadShake from 'react-reveal/HeadShake';
 
 const Contacts = () => {
     return (
-        <div className={style.contactsBlock}>
+        <div id={'contact'} className={style.contactsBlock}>
             <HeadShake>
-            <div className={`${containerStyle.mainContainer} ${style.container}`} action="form">
+            <div  className={`${containerStyle.mainContainer} ${style.container}`} action="form">
                 <Title even={true} title={'contacts'}/>
                 <form className={style.form} action="form">
                     <input type="text"/>

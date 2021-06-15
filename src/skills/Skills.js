@@ -22,7 +22,7 @@ import {faRegistered} from "@fortawesome/free-regular-svg-icons/faRegistered";
 
 const Skills = () => {
     return (
-        <div className={style.skillsBlock}>
+        <div id={'skills'} className={style.skillsBlock}>
                 <div className={`${containerStyle.mainContainer} ${style.skillsContainer}`}>
                     <Title even={false} title={'skills'}/>
                     <div className={style.skills}>

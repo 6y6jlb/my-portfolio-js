@@ -6,10 +6,17 @@ import snImage from '../assets/images/Screenshot_42.jpg';
 import counterImage from '../assets/images/Screenshot_40.jpg';
 import todoImage from '../assets/images/Screenshot_41.jpg';
 import portfolioImage from '../assets/images/Screenshot_39.jpg';
+import {useState} from "react";
 
 
 
 const MyProjects = () => {
+    const [active,setActive] = useState(null)
+
+    const onFocusChange = (active)=>{
+        console.log(active)
+        setActive(active)
+    }
     const divStyleSN = {
         backgroundImage: `url(${snImage})`
     };
@@ -23,17 +30,17 @@ const MyProjects = () => {
         backgroundImage: `url(${todoImage})`
     };
     return (
-        <div className={style.projectsBlock}>
+        <div  id={'projects'} className={style.projectsBlock}>
                 <div className={`${containerStyle.mainContainer} ${style.container}`}>
                     <Title even={true} title={'My Projects'}/>
                     <div className={style.projects}>
-                        <MyProject propertie={'left'} style={divStylePortfolio} projectName={'Portfolio'}
+                        <MyProject propertie={'left'} style={divStylePortfolio} projectName={'Portfolio'} active={active} setActive={onFocusChange}
                                    description={' The href attribute requires a valid value to be accessible. Provide a valid, navigable address '}/>
-                        <MyProject style={divStyleTodo} projectName={'To-Do'}
+                        <MyProject style={divStyleTodo} projectName={'To-Do'} active={active} setActive={onFocusChange}
                                    description={' The href attribute requires a valid value to be accessible. Provide a valid, navigable address '}/>
-                        <MyProject style={divStyleSN} projectName={'Social Network'}
+                        <MyProject style={divStyleSN} projectName={'Social Network'} active={active} setActive={onFocusChange}
                                    description={' The href attribute requires a valid value to be accessible. Provide a valid, navigable address '}/>
-                        <MyProject style={divStyleCounter} projectName={'Counter'}
+                        <MyProject style={divStyleCounter} projectName={'Counter'} active={active} setActive={onFocusChange}
                                    description={' Line 10:17:  The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and '}/>
                     </div>
                 </div>
