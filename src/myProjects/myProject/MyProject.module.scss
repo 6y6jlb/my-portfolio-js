@@ -3,6 +3,9 @@
 .project {
   width: 300px;
   margin: 5px;
+  background-color: $SecondBlackColor;
+  opacity: 0.1;
+
 
   .image {
     width: 100%;
@@ -13,33 +16,34 @@
     background-size: cover;
     position: relative;
     background-repeat: no-repeat;
+    transition: all 0.7s ease-out;
 
     &:before {
       content: '';
-      background-color: #000000;
+      background-color: $FirstBlackColor;
       opacity: 0.7;
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
+      transition: all 0.6s ease-out;
     }
   }
-
   .button {
     z-index: 1;
-    color: $SecondColor;
+    color: $FirstWhiteColor;
     text-transform: lowercase;
-
   }
 
   .active {
+    transition: all 0.3s ease-out;
+    transform: scale(1.1,1.1);
     font-size: 1.2em;
-    -webkit-box-shadow: -5px -1px 26px 10px $BlueColor;
-    -moz-box-shadow: -5px -1px 26px 10px $BlueColor;
-    box-shadow: -5px -1px 26px 10px $BlueColor;
-
-
+    -webkit-box-shadow: -1px -1px 4px 1px $FirstGreyColor;
+    -moz-box-shadow: -1px -1px 4px 1px $FirstGreyColor;
+    box-shadow: -1px -1px 4px 1px $FirstGreyColor;
+    margin: 10px 0;
 
     &:before {
       opacity: 0.3;
@@ -50,12 +54,14 @@
 
 
   .descriptionBlock {
+    padding: 10px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
     font-size: 0.9em;
+
   }
 
   p {

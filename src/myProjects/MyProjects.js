@@ -35,13 +35,13 @@ const MyProjects = () => {
                     <Title even={true} title={'My Projects'}/>
                     <div className={style.projects}>
                         <MyProject propertie={'left'} style={divStylePortfolio} projectName={'Portfolio'} active={active} setActive={onFocusChange}
-                                   description={' The href attribute requires a valid value to be accessible. Provide a valid, navigable address '}/>
+                                   description={' Current portfolio page is made on react using several libraries for animation and sass  '}/>
                         <MyProject style={divStyleTodo} projectName={'To-Do'} active={active} setActive={onFocusChange}
-                                   description={' The href attribute requires a valid value to be accessible. Provide a valid, navigable address '}/>
+                                   description={' To-do project written entirely in type-script using Material UI library, redux, redux-thunk, axios etc. '}/>
                         <MyProject style={divStyleSN} projectName={'Social Network'} active={active} setActive={onFocusChange}
-                                   description={' The href attribute requires a valid value to be accessible. Provide a valid, navigable address '}/>
+                                   description={' The same type-script, almost the same technology stack as there, only without material-ui, just custom styles'}/>
                         <MyProject style={divStyleCounter} projectName={'Counter'} active={active} setActive={onFocusChange}
-                                   description={' Line 10:17:  The href attribute requires a valid value to be accessible. Provide a valid, navigable address as the href value. If you cannot provide a valid href, but still need the element to resemble a link, use a button and '}/>
+                                   description={' Simple counter with redux, type-script and local-storage '}/>
                     </div>
                 </div>
 

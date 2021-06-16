@@ -10,10 +10,10 @@
     text-align: start;
     > div {
       &:nth-child(n) {
-        background-color: $SecondColor;;
+        background-color: $FirstWhiteColor;;
       }
       &:nth-child(2n) {
-        background-color:$FirstColor;
+        background-color: $FirstBlackColor;
       }
     }
 
@@ -41,9 +41,9 @@
     font-family: $fontParagraph;
     margin-top: 10px;
     font-size: 10pt;
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: 1px;
-    line-height: 15pt;
+    line-height: 18pt;
 
 
   }

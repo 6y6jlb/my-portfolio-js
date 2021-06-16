@@ -3,7 +3,7 @@
 .contactsBlock {
   width: 100%;
   //min-height: 400px;
-  background-color: $FirstColor;
+  background-color: $FirstBlackColor;
   padding: 40px 0;
   text-align: center;
   display: flex;
@@ -32,16 +32,16 @@
         width: 260px;
       }
     input {
-      background-color: $SecondColor;
+      background-color: $FirstWhiteColor;
     }
       .textArea {
         height: 130px;
-        background-color: $SecondColor;
+        background-color: $FirstWhiteColor;
 
       }
     }
     .button {
-      color: $SecondColor;
+      color: $FirstWhiteColor;
       width: 150px;
       text-transform: uppercase;
     }

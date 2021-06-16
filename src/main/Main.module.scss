@@ -3,7 +3,7 @@
 .mainBlock {
   min-height: 100vh;
   height: 1000px;
-  background-color: $FirstColor;
+  background-color: $FirstBlackColor;
 
   .particles {
     position: absolute;
@@ -43,7 +43,7 @@
       line-height: 22pt;
 
       h1, span, h3 {
-        color: $ThirdColor;
+        color: $SecondWhiteColor;
         font-weight: 100;
         letter-spacing: 2pt;
         font-size: 9pt;
@@ -73,7 +73,7 @@
   .photoBlock {
     width: 200px;
     height: 70vh;
-    background-color: $SecondColor;
+    background-color: $FirstWhiteColor;
     opacity: 0.2;
     position: relative;
     right: 50px;

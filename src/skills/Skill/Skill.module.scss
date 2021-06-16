@@ -1,8 +1,9 @@
 @import './src/common/styles/sass/variables';
+
 .skill {
   width: 300px;
-  min-height: 30vh;
-  color: $FourColor;
+  min-height: 20vh;
+  color: $FirstGreyColor;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -10,12 +11,15 @@
   padding: 0 10px 10px 10px;
   box-sizing: border-box;
   margin: 5px;
+
   h4 {
-    font-size: 10pt;
+    font-size: 0.7em;
     font-weight: 400;
     letter-spacing: 3pt;
     margin-top: 25px;
+    transition: all 0.3s ease-out;
   }
+
   p {
     font-family: $fontParagraph;
     margin-top: 10px;
@@ -25,4 +29,15 @@
     line-height: 15pt;
 
 
-}}
+  }
+}
+
+.active {
+  .title {
+    font-size: 1em;
+    transition: all 0.3s ease-out;
+  }
+
+
+
+}

@@ -2,7 +2,7 @@
 
 .projectsBlock {
   height: max-content;
-  background-color: $FirstColor;
+  background-color: $FirstBlackColor;
   padding: 40px 0;
 
   .container {
@@ -12,7 +12,8 @@
     flex-direction: column;
 
     h4, p {
-      color: $ThirdColor;
+      color: $SecondWhiteColor;
+
     }
 
 
@@ -22,6 +23,7 @@
       display: flex;
       justify-content: space-evenly;
       flex-wrap: wrap;
+      gap: 20px;
 
 
     }
