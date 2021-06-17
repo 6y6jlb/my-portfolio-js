@@ -6,23 +6,22 @@ import MyProjects from "./myProjects/MyProjects";
 import RemoteJob from "./remoteJob/RemoteJob";
 import Contacts from "./contacts/Contacts";
 import Footer from "./footer/Footer";
-import HomeMapLink from "./common/components/map/HomeMapLink";
 
 
 const App = () => {
-    const test=1;
-  return (
-      <div className="App">
-   {/*     <Header/>
-          <Main/>
-          <Skills/>
-          <MyProjects/>
-          <RemoteJob/>
-          <Contacts/>
-          <Footer/>*/}
-          <HomeMapLink/>
-      </div>
-  );
+    const test = 1;
+    return (
+        <div className="App">
+            <Header/>
+            <Main/>
+            <Skills/>
+            <MyProjects/>
+            <RemoteJob/>
+            <Contacts/>
+            <Footer/>
+
+        </div>
+    );
 }
 
 export default App;
