@@ -3,7 +3,6 @@ import containerStyle from '../common/styles/Container.module.scss'
 import Skill from "./Skill/Skill";
 import Title from "../common/components/title/Title";
 import {faJs} from "@fortawesome/free-brands-svg-icons/faJs";
-import {faReact} from "@fortawesome/free-brands-svg-icons/faReact";
 import {faFileCode, faProjectDiagram} from "@fortawesome/free-solid-svg-icons";
 import {faCss3Alt} from "@fortawesome/free-brands-svg-icons/faCss3Alt";
 import {faHtml5, faSass} from "@fortawesome/free-brands-svg-icons";
@@ -13,7 +12,6 @@ import {faBook} from "@fortawesome/free-solid-svg-icons/faBook";
 import {faGithubSquare} from "@fortawesome/free-brands-svg-icons/faGithubSquare";
 import {faHighlighter} from "@fortawesome/free-solid-svg-icons/faHighlighter";
 import {faEdit} from "@fortawesome/free-solid-svg-icons/faEdit";
-import {faSquareRootAlt} from "@fortawesome/free-solid-svg-icons/faSquareRootAlt";
 import {faTextHeight} from "@fortawesome/free-solid-svg-icons/faTextHeight";
 import {faRegistered} from "@fortawesome/free-regular-svg-icons/faRegistered";
 import {useState} from "react";
