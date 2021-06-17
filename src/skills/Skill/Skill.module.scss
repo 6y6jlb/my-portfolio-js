@@ -12,6 +12,11 @@
   box-sizing: border-box;
   margin: 5px;
 
+  .icon {
+    font-size: 60px;
+    transition: all 0.3s ease-out;
+  }
+
   h4 {
     font-size: 0.7em;
     font-weight: 400;
@@ -33,11 +38,15 @@
 }
 
 .active {
+  .icon {
+    font-size: 70px;
+    transition: all 0.3s ease-out;
+  }
   .title {
     font-size: 1em;
     transition: all 0.3s ease-out;
-  }
 
+  }
 
 
 }

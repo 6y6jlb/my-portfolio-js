@@ -10,9 +10,9 @@ const Contacts = () => {
             <div  className={`${containerStyle.mainContainer} ${style.container}`} action="form">
                 <Title even={true} title={'contacts'}/>
                 <form className={style.form} action="form">
-                    <input type="text"/>
-                    <input type="text"/>
-                    <textarea className={style.textArea}/>
+                    <label id={'name'}></label><input placeholder={'your name'} name={'name'} type="text"/>
+                    <label id={'theme'}></label><input placeholder={'something else'} name={'theme'}  type="text"/>
+                    <textarea placeholder={'text here'} className={style.textArea}/>
                 </form>
                 <div className={style.button}>send</div>
             </div>

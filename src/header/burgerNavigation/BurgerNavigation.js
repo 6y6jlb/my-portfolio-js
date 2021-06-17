@@ -10,7 +10,7 @@ const BurgerNavigation = () => {
         <>
             <div className={style.burgerNavigation}>
                 <div onClick={() => setIsOpen(!isOpen)} className={style.burgerButton}>
-                   <FontAwesomeIcon style={{fontSize: '28px',color:'white'}} icon={faBars}/>
+                   <FontAwesomeIcon style={{fontSize: '28px',color:isOpen?'black':'white'}} icon={faBars}/>
                 </div>
                <div className={isOpen ? style.burgerNavItems :`${style.burgerNavItems} ${style.hide}` }><Link
                     activeClass={style.active}
