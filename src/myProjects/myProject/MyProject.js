@@ -3,7 +3,6 @@ import HeadShake from 'react-reveal/HeadShake';
 
 
 const MyProject = (props) => {
-    console.log(props.active,props.projectName)
     const active = props.active === props.projectName
 
     return (

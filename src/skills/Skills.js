@@ -37,8 +37,8 @@ const skillsEntities = [
 
 const Skills = () => {
     const [active,setActive] = useState(null)
-    const mappedSkills = skillsEntities.map(s=> {
-        return <Skill active={active} setActive={setActive} skillTitle={s.name} icon={s.icon} description={s.description}/>
+    const mappedSkills = skillsEntities.map((s,index)=> {
+        return <Skill key={index} active={active} setActive={setActive} skillTitle={s.name} icon={s.icon} description={s.description}/>
     } )
 
     return (

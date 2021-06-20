@@ -10,7 +10,7 @@
     text-align: start;
     > div {
       &:nth-child(n) {
-        background-color: $FirstWhiteColor;;
+        background-color: $FirstWhiteColor;
       }
       &:nth-child(2n) {
         background-color: $FirstBlackColor;

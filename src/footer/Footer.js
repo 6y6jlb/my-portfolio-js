@@ -19,11 +19,10 @@ const contacts = [
 ]
 
 const Footer = (props) => {
-    console.log(props)
     const [active,setActive] = useState(null)
-    const mappedContacts = contacts.map((c)=>{
-        return <>
-        <Tada>
+    const mappedContacts = contacts.map((c,index)=>{
+        return <div key={index}>
+        <Tada >
                 <div onMouseEnter={()=>setActive(c.link)} className={active===c.link?style.active + ' ' +style.second: style.second }>
                     <a href={c.link} > <FontAwesomeIcon style={{color:'white'}} icon={c.item}  />
                        </a>
@@ -31,7 +30,7 @@ const Footer = (props) => {
                 </div>
             <div className={style.first}></div>
         </Tada>
-        </>
+        </div>
     })
     return (
         <div className={style.footerFrame}>

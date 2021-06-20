@@ -15,23 +15,38 @@
     justify-content: space-between;
     align-items: center;
 
+
     .title {
       width: 150px;
     }
 
     .form {
-      box-sizing: border-box;
+      box-sizing: content-box;
       padding: 2px;
       width: 400px;
       height: 200px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      align-items: stretch;
+      .button {
+        border: none;
+        color: $FirstBlackColor;
+        background-color: $FirstGreyColor;
+        text-transform: uppercase;
+        display: flex;
+        justify-content: center;
+      }
+      .buttonActive {
+        color: #686f74;
 
+      }
       :focus {
-        background-color: white;
+
+        background-color: $FirstWhiteColor;
         padding: 2px;
-        outline: 1px solid $FirstGreyColor;
+        outline: none;
+        border: none;
       }
 
       @media screen and (max-width: 600px) {
@@ -42,24 +57,42 @@
       }
 
       input {
-        background-color: $FirstWhiteColor;
-
+        background-color: $SecondWhiteColor;
+        color: $FirstBlackColor;
+        border: none;
       }
 
       .textArea {
+        color: $FirstBlackColor;
+        border: none;
         height: 130px;
+        background-color: $SecondWhiteColor;
+
+        resize: none;
+        &:focus {
+          background-color:$FirstWhiteColor;
+          padding: 2px;
+        }
       }
 
-      :focus {
-        padding: 3px;
+
+    }
+    .success {
+      position: relative;
+      &::before {
+        z-index: 20;
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: $FirstBlackColor;
+        opacity: 0.6;
       }
     }
 
-    .button {
-      color: $FirstWhiteColor;
-      width: 150px;
-      text-transform: uppercase;
-    }
+
   }
 
 }
