@@ -10,10 +10,46 @@
   align-items: center;
 
   .container {
-
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+    z-index: 1;
+    .modal {
+      z-index: 10;
+      position: absolute;
+      top: 45%;
+      display: flex;
+
+
+
+      .modalText {
+        z-index: 10;
+        width: 150px;
+        height: 50px;
+        background-color: $FirstWhiteColor;
+        color: $FirstBlackColor;
+        display: flex;
+        text-transform: uppercase;
+        justify-content: center;
+        align-items: center;
+
+
+
+      }
+      &::before {
+        z-index: -1;
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: $FirstBlackColor;
+        opacity: 0.5;
+
+      }
+    }
 
 
     .title {
@@ -29,6 +65,7 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: stretch;
+
       .button {
         border: none;
         color: $FirstBlackColor;
@@ -36,11 +73,14 @@
         text-transform: uppercase;
         display: flex;
         justify-content: center;
+        cursor: pointer;
       }
+
       .buttonActive {
         color: #686f74;
 
       }
+
       :focus {
 
         background-color: $FirstWhiteColor;
@@ -69,27 +109,14 @@
         background-color: $SecondWhiteColor;
 
         resize: none;
+
         &:focus {
-          background-color:$FirstWhiteColor;
+          background-color: $FirstWhiteColor;
           padding: 2px;
         }
       }
 
 
-    }
-    .success {
-      position: relative;
-      &::before {
-        z-index: 20;
-        content: '';
-        position: fixed;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background-color: $FirstBlackColor;
-        opacity: 0.6;
-      }
     }
 
 
