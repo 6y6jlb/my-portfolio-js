@@ -3,7 +3,7 @@ import HeadShake from 'react-reveal/HeadShake';
 
 
 const MyProject = ({link,active,projectName,project,description,setActive,...props}) => {
-    const activeStyle = props.active === props.projectName
+    const activeStyle = active === projectName
 
     return (
         <HeadShake>
@@ -11,7 +11,6 @@ const MyProject = ({link,active,projectName,project,description,setActive,...pro
                  className={style.project}>
                 <a href={link} className={style.button}>watch</a>
                 <div style={props.style} className={`${style.image} ${activeStyle && style.active}`}>
-
                 </div>
                 <div className={style.descriptionBlock}>
                     <h4 className={style.projectName}>{projectName}</h4>
