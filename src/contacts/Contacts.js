@@ -23,7 +23,7 @@ const Contacts = () => {
             setLoading('show')
             setTimeout(() => {
                 setLoading('hide')
-            }, 2000)
+            }, 1000)
         } else {
             setLoading('badRequest')
         }
