@@ -6,6 +6,10 @@ import MyProjects from "./myProjects/MyProjects";
 import RemoteJob from "./remoteJob/RemoteJob";
 import Contacts from "./contacts/Contacts";
 import Footer from "./footer/Footer";
+import React from "react";
+
+//const Skills = React.lazy(() => import("./skills/Skills"));
+//const OtherComponent = React.lazy(() => import('./OtherComponent'));
 
 
 const App = () => {
