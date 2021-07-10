@@ -1,8 +1,10 @@
 import style from './Skill.module.scss'
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import Tada from 'react-reveal/Tada';
+import React from "react";
 
-const Skill = (props) => {
+
+const Skill = React.memo((props) => {
 const active = props.active === props.skillTitle
     //const newStyle = {fontSize: active?'68px':'60px'}
 
@@ -19,5 +21,5 @@ const active = props.active === props.skillTitle
             </div>
         </Tada>
     )
-}
+})
 export default Skill;

@@ -2,9 +2,10 @@ import style from './Main.module.scss';
 import containerStyle from '../common/styles/Container.module.scss';
 import bgImage from '../common/assets/img/face.png';
 import ReactTypingEffect from 'react-typing-effect';
+import React from 'react'
 
 
-const Main = () => {
+const Main = React.memo(() => {
     const bg = {
         backgroundImage: `url(${bgImage})`,
         backgroundSize: 'cover',
@@ -161,5 +162,5 @@ const Main = () => {
             </div>
         </div>
     )
-}
+})
 export default Main;

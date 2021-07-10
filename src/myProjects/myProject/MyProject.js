@@ -1,8 +1,9 @@
 import style from './MyProject.module.scss';
 import HeadShake from 'react-reveal/HeadShake';
+import React from 'react';
 
 
-const MyProject = ({link,active,projectName,project,description,setActive,...props}) => {
+const MyProject = React.memo(({link,active,projectName,project,description,setActive,...props}) => {
     const activeStyle = active === projectName
 
     return (
@@ -19,5 +20,5 @@ const MyProject = ({link,active,projectName,project,description,setActive,...pro
             </div>
         </HeadShake>
     )
-}
+})
 export default MyProject;

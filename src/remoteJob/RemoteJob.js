@@ -2,8 +2,9 @@ import style from './RemoteJob.module.scss'
 import containerStyle from '../common/styles/Container.module.scss'
 import Title from "../common/components/title/Title";
 import Tada from 'react-reveal/Tada';
+import React from "react";
 
-const RemoteJob = () => {
+const RemoteJob = React.memo(() => {
     return (
 
         <div className={style.remoteJobBlock}>
@@ -17,5 +18,5 @@ const RemoteJob = () => {
             </div>
         </div>
     )
-}
+})
 export default RemoteJob;

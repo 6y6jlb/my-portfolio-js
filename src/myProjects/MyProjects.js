@@ -6,10 +6,10 @@ import snImage from '../assets/images/Screenshot_42.jpg';
 import counterImage from '../assets/images/Screenshot_40.jpg';
 import todoImage from '../assets/images/Screenshot_41.jpg';
 import portfolioImage from '../assets/images/Screenshot_39.jpg';
-import {useState} from "react";
+import React,{useState} from "react";
 
 
-const MyProjects = () => {
+const MyProjects = React.memo(() => {
     const [active, setActive] = useState(null)
 
     const onFocusChange = (active) => {
@@ -51,7 +51,7 @@ const MyProjects = () => {
 
         </div>
     )
-}
+})
 
 export default MyProjects;
 

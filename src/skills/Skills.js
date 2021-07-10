@@ -14,7 +14,7 @@ import {faHighlighter} from "@fortawesome/free-solid-svg-icons/faHighlighter";
 import {faEdit} from "@fortawesome/free-solid-svg-icons/faEdit";
 import {faTextHeight} from "@fortawesome/free-solid-svg-icons/faTextHeight";
 import {faRegistered} from "@fortawesome/free-regular-svg-icons/faRegistered";
-import {useState} from "react";
+import React,{useState} from "react";
 
 const skillsEntities = [
     {name:'JS',icon:faJs,description:''},
@@ -35,7 +35,7 @@ const skillsEntities = [
 ]
 
 
-const Skills = () => {
+const Skills = React.memo(() => {
     const [active,setActive] = useState(null)
     const mappedSkills = skillsEntities.map((s,index)=> {
         return <Skill key={index} active={active} setActive={setActive} skillTitle={s.name} icon={s.icon} description={s.description}/>
@@ -51,6 +51,6 @@ const Skills = () => {
                 </div>
         </div>
     )
-}
+})
 export default Skills;
 

@@ -4,8 +4,9 @@ import Title from "../common/components/title/Title";
 import HeadShake from 'react-reveal/HeadShake';
 import {useEffect, useState} from "react";
 import {API} from "../api/API";
+import React from "react";
 
-const Contacts = () => {
+const Contacts = React.memo(() => {
     const [contacts, setContacts] = useState('')
     const [name, setName] = useState('')
     const [message, setMessage] = useState('')
@@ -59,5 +60,5 @@ const Contacts = () => {
             </HeadShake>
         </div>
     )
-}
+})
 export default Contacts;

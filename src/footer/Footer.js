@@ -5,7 +5,7 @@ import Tada from 'react-reveal/Tada';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCode, faEnvelopeOpen, faMapMarkerAlt, faPaperPlane, faPhone} from "@fortawesome/free-solid-svg-icons";
 import {faGithubAlt, faLinkedinIn} from "@fortawesome/free-brands-svg-icons";
-import {useState} from "react";
+import React,{useState} from "react";
 
 
 const contacts = [
@@ -18,7 +18,7 @@ const contacts = [
     {item:faCode,title:'codeWars', link:'https://www.codewars.com/users/6y6jlb'},
 ]
 
-const Footer = (props) => {
+const Footer = React.memo((props) => {
     const [active,setActive] = useState(null)
     const mappedContacts = contacts.map((c,index)=>{
         return <Tada key={index}>
@@ -44,6 +44,6 @@ const Footer = (props) => {
 
         </div>
     )
-}
+})
 export default Footer;
 
