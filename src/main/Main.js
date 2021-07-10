@@ -4,13 +4,6 @@ import bgImage from '../common/assets/img/face.png';
 import ReactTypingEffect from 'react-typing-effect';
 
 
-
-
-
-
-
-
-
 const Main = () => {
     const bg = {
         backgroundImage: `url(${bgImage})`,
@@ -131,8 +124,8 @@ const Main = () => {
     }
 
     return (
-        <div  id={'common'} style={bg} className={style.mainBlock}>
-           {/* <Particles className={style.particles} params={styleParticles}/>*/}
+        <div id={'common'} style={bg} className={style.mainBlock}>
+            {/* <Particles className={style.particles} params={styleParticles}/>*/}
             <div className={`${containerStyle.mainContainer} ${style.container}`}>
                 <div className={style.textBlock}>
 
@@ -160,7 +153,7 @@ const Main = () => {
                                                    </h1>
                                                );
                                            }}
-                    /></h1>
+                        /></h1>
 
                     <h3>My name is Basalov Alexey and this is my portfolio</h3>
                 </div>
