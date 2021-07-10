@@ -1,8 +1,15 @@
 import style from './Main.module.scss';
 import containerStyle from '../common/styles/Container.module.scss';
 import bgImage from '../common/assets/img/face.png';
-/*import Particles from 'react-particles-js';*/
 import ReactTypingEffect from 'react-typing-effect';
+
+
+
+
+
+
+
+
 
 const Main = () => {
     const bg = {
