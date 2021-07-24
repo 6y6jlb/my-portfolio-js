@@ -9,7 +9,6 @@ import Footer from "./footer/Footer";
 
 
 const App = () => {
-    const test = 1;
     return (
         <div className="App">
             <Header/>

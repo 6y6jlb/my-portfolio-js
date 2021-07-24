@@ -18,7 +18,7 @@ const Contacts = () => {
     const onSubmit = async (e) => {
         setLoading('loading')
         e.preventDefault()
-        const res = await API.test(contacts, name, message)
+        const res = await API.sendContactsAndMessage(contacts, name, message)
         if (res.data === 'ok') {
             setLoading('show')
             setTimeout(() => {
@@ -28,9 +28,6 @@ const Contacts = () => {
             setLoading('badRequest')
         }
     }
-
-    useEffect(() => {
-    }, [])
 
 
     return (
