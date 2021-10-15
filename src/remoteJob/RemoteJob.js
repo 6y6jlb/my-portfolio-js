@@ -11,7 +11,7 @@ const RemoteJob = () => {
                     <Title even={false} title={'remote job'}/>
                 <Tada>
                     <div className={style.insideWrapper}>
-                        <p className={style.description}> yes </p>
+                        <p className={style.description}> agree </p>
                     </div>
                 </Tada>
             </div>

@@ -38,8 +38,8 @@ const Footer = (props) => {
                 <div className={style.insideContainer}>
                     {mappedContacts}
                 </div>
-
-                <p className={style.lowSpan}>2021 looking for job</p>
+                <p className={style.lowSpan}>Working now from "A3F Group" </p>
+                <p className={style.lowSpan}><a href="https://hoqu.com/" >HOQU project</a></p>
             </div>
 
         </div>

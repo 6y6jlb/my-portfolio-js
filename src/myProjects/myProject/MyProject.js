@@ -3,27 +3,27 @@ import HeadShake from 'react-reveal/HeadShake';
 import snImage from "../../assets/images/Screenshot_42.jpg";
 import counterImage from "../../assets/images/Screenshot_40.jpg";
 import portfolioImage from "../../assets/images/Screenshot_39.jpg";
-import todoImage from "../../assets/images/Screenshot_41.jpg";
+import emptyImage from "../../assets/images/empty.jpg";
 
 
-const MyProject = ({link,active,projectName,project,description,setActive,...props}) => {
-    const divStyleSN = {
-        backgroundImage: `url(${snImage})`
-    };
-    const divStyleCounter = {
-        backgroundImage: `url(${counterImage})`
-    };
-    const divStylePortfolio = {
-        backgroundImage: `url(${portfolioImage})`
-    };
-    const divStyleTodo = {
-        backgroundImage: `url(${todoImage})`
-    };
+const PROJECTS = {
+    TODO: 'to-do-react',
+    PORTFOLIO: 'my-portfolio-js',
+    COUNTER: 'counter-ts',
+    SN: 'social-nenwork-ts',
+}
 
-    const stylePic=projectName.toLocaleLowerCase().indexOf('to-do')>-1?divStyleTodo:divStyleCounter
+const IMAGES = {
+    [PROJECTS.COUNTER]: `url(${counterImage})`,
+    [PROJECTS.TODO]: `url(${snImage})`,
+    [PROJECTS.PORTFOLIO]: `url(${portfolioImage})`,
+    [PROJECTS.SN]: `url(${snImage})`,
+}
 
-
-
+const MyProject = (props) => {
+    const {link, active, projectName, project, description, setActive} = props;
+    const image = projectName.toLocaleLowerCase()
+    const bgc = {backgroundImage: IMAGES[image] ? IMAGES[image] : `url(${emptyImage})`};
     const activeStyle = active === projectName
 
     return (
@@ -31,7 +31,7 @@ const MyProject = ({link,active,projectName,project,description,setActive,...pro
             <div onMouseEnter={() => setActive(projectName)}
                  className={style.project}>
                 <a href={link} className={style.button}>watch</a>
-                <div style={stylePic} className={`${style.image} ${activeStyle && style.active}`}>
+                <div style={bgc} className={`${style.image} ${activeStyle && style.active}`}>
                 </div>
                 <div className={style.descriptionBlock}>
                     <h4 className={style.projectName}>{projectName}</h4>
