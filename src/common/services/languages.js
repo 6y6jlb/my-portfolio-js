@@ -1,11 +1,12 @@
 import { API } from "../../api/API"
 
+
 export const getAllLanguagesGitHub = async (repos) => {
+	const result = {}
 	try {
-		const result = {}
 		repos.forEach((repo) => {
 			API.getRepoLanguges(repo).then((response) => {
-                const data = response.data;
+				const data = response.data
 				for (const element in data) {
 					if (result[element]) {
 						result[element] = data[element] + result[element]
@@ -15,6 +16,8 @@ export const getAllLanguagesGitHub = async (repos) => {
 				}
 			})
 		})
-        console.log(result)
-	} catch (error) {}
+	} catch (error) {
+	} finally {
+		return result
+	}
 }

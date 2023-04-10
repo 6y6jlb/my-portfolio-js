@@ -18,9 +18,15 @@ const App = () => {
 		dispatch({ type: "LOADING", payload: { directory: "projects", value: true } })
 
 		API.getGitHubRepos()
-			.then((res) => dispatch({ type: "SET_PROJECTS", payload: res.data }))
+			.then((res) => {
+				dispatch({ type: "LOADING", payload: { directory: "projects", value: true } })
+				dispatch({ type: "SET_PROJECTS", payload: res.data })}
+				)
 			.catch((error) => console.log(error))
-			.finally(dispatch({ type: "LOADING", payload: { directory: "projects", value: false } }))
+			.finally(() => {
+				dispatch({ type: "LOADING", payload: { directory: "projects", value: false } })
+				dispatch({ type: "LOADED", payload: { directory: "projects", value: true } })
+			})
 	}, [])
 
 	return (
