@@ -7,4 +7,7 @@ export const API = {
 	getGitHubRepos: () => {
 		return axios.get("https://api.github.com/users/6y6jlb/repos")
 	},
+	getRepoLanguges(repo) {
+		return axios.get(`https://api.github.com/repos/6y6jlb/${repo}/languages`)
+	}
 }

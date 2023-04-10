@@ -1,4 +1,4 @@
-export default {
+const styles =  {
     "particles": {
         "number": {
             "value": 100,
@@ -103,3 +103,5 @@ export default {
     },
     "retina_detect": true
 };
+
+export default styles;

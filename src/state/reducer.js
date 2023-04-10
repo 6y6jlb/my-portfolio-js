@@ -1,11 +1,15 @@
 export const reducer = (state, action) => {
 	switch (action.type) {
 		case "SET_PROJECTS":
-			return { ...state, projects: [...state.projects, ...action.payload] }
-		case "LOADED":
-			return { ...state, loading: false }
+			return { ...state, projects: { ...state.projects, data: action.payload } }
+		case "SET_LANGUAGES":
+			return { ...state, languages: { ...state.languages, data: action.payload } }
 		case "LOADING":
-			return { ...state, loading: true }
+			return {
+				...state,
+				[action.payload.directory]: { ...state[action.payload.directory], loading: action.payload.value },
+			}
+
 		default:
 			return state
 	}

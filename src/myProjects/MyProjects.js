@@ -16,8 +16,8 @@ const MyProjects = () => {
 	}
 
 	const mappedProjects =[
-		state.projects &&
-		state.projects.map((project, index) => (
+		state.projects.data &&
+		state.projects.data.map((project, index) => (
 			<MyProject
 				key={index}
 				style={{ backgroundImage: `url(${snImage})` }}
