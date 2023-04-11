@@ -8,13 +8,12 @@ import MyProjects from "./myProjects/MyProjects"
 import RemoteJob from "./remoteJob/RemoteJob"
 
 const App = () => {
-
 	return (
 		<div className="App">
 			<Header />
 			<Main />
-			<MyProjects />
 			<Languages />
+			<MyProjects />
 			<RemoteJob />
 			<Contacts />
 			<Footer />

@@ -4,6 +4,7 @@ import containerStyle from "../common/styles/Container.module.scss"
 import { useProjectsStore } from "../state/state"
 import style from "./MyProjects.module.scss"
 import MyProject from "./myProject/MyProject"
+import { Audio } from "react-loader-spinner"
 
 const MyProjects = () => {
 	const [active, setActive] = useState(null)
@@ -34,7 +35,20 @@ const MyProjects = () => {
 		<div id={"projects"} className={style.projectsBlock}>
 			<div className={`${containerStyle.mainContainer} ${style.container}`}>
 				<Title even={true} title={"My Projects"} />
-				<div className={style.projects}>{mappedProjects}</div>
+				{
+					projects.loaded ? 
+					<div className={style.projects}>{mappedProjects}</div>
+					:<Audio
+							height="80"
+							width="80"
+							radius="9"
+							color="grey"
+							ariaLabel="loading"
+							wrapperStyle
+							wrapperClass
+						/>
+				}
+				
 			</div>
 		</div>
 	)
