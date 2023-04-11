@@ -1,7 +1,7 @@
 import { create } from "zustand"
 import { API } from "../api/API"
-import ru from "../translations/ru.js"
-import en from "../translations/en.js"
+import ru from "../translations/ru.json"
+import en from "../translations/en.json"
 
 export const useProjectsStore = create((set) => ({
 	data: [],
