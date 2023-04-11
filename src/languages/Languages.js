@@ -6,7 +6,7 @@ export default function Languages() {
 	if (state.projects.loaded && !state.languages.loaded) {
 		dispatch({ type: "CALCULATE_LANGUAGES"})
 		dispatch({ type: "LOADED", payload: { directory: "languages", value: true } })
-	
 	}
+	console.log(state.languages.data)
 	return <div></div>
 }

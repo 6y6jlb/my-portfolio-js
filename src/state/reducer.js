@@ -2,8 +2,7 @@ export const reducer = (state, action) => {
 	switch (action.type) {
 		case "SET_PROJECTS":
 			return { ...state, projects: { ...state.projects, data: action.payload } }
-		case "CALCULATE_LANGUAGES":
-			
+		case "SET_LANGUAGES":
 			return { ...state, languages: { ...state.projects, data: action.payload } }
 		case "LOADING":
 			return {

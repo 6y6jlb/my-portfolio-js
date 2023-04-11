@@ -1,9 +1,7 @@
-import style from "./Main.module.scss"
-import containerStyle from "../common/styles/Container.module.scss"
-import bgImage from "../assets/images/face.png"
-import Particles from "react-particles-js"
 import ReactTypingEffect from "react-typing-effect"
-import particleStyles from "../common/styles/particleStyles"
+import bgImage from "../assets/images/face.png"
+import containerStyle from "../common/styles/Container.module.scss"
+import style from "./Main.module.scss"
 
 const Main = () => {
 	const bg = {
@@ -15,7 +13,6 @@ const Main = () => {
 
 	return (
 		<div id={"common"} style={bg} className={style.mainBlock}>
-			<Particles className={style.particles} params={particleStyles} />
 			<div className={`${containerStyle.mainContainer} ${style.container}`}>
 				<div className={style.textBlock}>
 					<span>Hi there</span>
