@@ -1,3 +1,4 @@
+import { useIntl } from "react-intl"
 import ReactTypingEffect from "react-typing-effect"
 import bgImage from "../assets/images/face.png"
 import containerStyle from "../common/styles/Container.module.scss"
@@ -11,21 +12,25 @@ const Main = () => {
 		backgroundRepeat: "no-repeat",
 	}
 
+	const intl = useIntl()
+
+	const typedStrings = [
+		intl.formatMessage({id:"typing.first"}),
+		intl.formatMessage({id:"typing.second"}),
+		intl.formatMessage({id:"typing.third"}),
+		intl.formatMessage({id:"typing.fourth"}),
+	]
+
 	return (
 		<div id={"common"} style={bg} className={style.mainBlock}>
 			<div className={`${containerStyle.mainContainer} ${style.container}`}>
 				<div className={style.textBlock}>
-					<span>Hi there</span>
+					<span>{intl.formatMessage({id:"main.greeting"})}</span>
 					<h1 className={style.title}>
-						{"I`am "}
+						{intl.formatMessage({id:"typing.zero"})}
 						<ReactTypingEffect
 							className={style.test}
-							text={[
-								" frontend developer",
-								" react developer",
-								" redux developer",
-								" typescript developer",
-							]}
+							text={typedStrings}
 							cursorRenderer={(cursor) => <h1>{cursor}</h1>}
 							displayTextRenderer={(text, i) => {
 								return (
@@ -40,9 +45,9 @@ const Main = () => {
 						/>
 					</h1>
 
-					<h3>My name is Basalov Alexey and this is my portfolio</h3>
+					<h3>{intl.formatMessage({id:"main.describtion"})}</h3>
 				</div>
-				<div className={style.photoBlock}></div>
+				<div className={style.photoBlock} />
 			</div>
 		</div>
 	)

@@ -5,6 +5,7 @@ import containerStyle from "../common/styles/Container.module.scss"
 import { useLanguagesStore } from "../state/state"
 import style from "./Languages.module.scss"
 import chartOptions from "./chart"
+import { FormattedMessage } from "react-intl"
 
 export default function Languages() {
 	const languages = useLanguagesStore()
@@ -13,7 +14,7 @@ export default function Languages() {
 	return (
 		<div id={"languages"} className={style.block}>
 			<div className={`${containerStyle.mainContainer} ${style.container}`}>
-				<Title even={false} title={"Languages"} />
+				<Title even={false} title={<FormattedMessage id="languages.title"/>} />
 				<div className={style.chart}>
 					{Object.keys(chartData).length > 0 ? (
 						<Chart

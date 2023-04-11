@@ -1,6 +1,20 @@
 {
-    "navigation.common":"Common",
-    "navigation.languages":"Languages",
-    "navigation.projects":"Projects",
-    "navigation.contact":"Contact"
+    "navigation.common": "Common",
+    "navigation.languages": "Languages",
+    "navigation.projects": "Projects",
+    "navigation.contact": "Contact",
+    "main.describtion": "My name is Basalov Alexey and this is my portfolio",
+    "main.greeting": "Hello",
+    "typing.zero": "I,m ",
+    "typing.first": " frontend developer",
+    "typing.second": " react developer",
+    "typing.third": " redux developer",
+    "typing.fourth": " typescript developer",
+    "remote.agree": "agree",
+    "remote.title": "remote job",
+    "languages.title": "languages",
+    "projects.title": "projects",
+    "contacts.title": "contacts",
+    "buttons.save": "save",
+    "owner.name": "Basalov Alexey"
 }

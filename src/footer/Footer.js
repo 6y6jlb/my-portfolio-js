@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCode, faEnvelopeOpen, faMapMarkerAlt, faPaperPlane, faPhone } from "@fortawesome/free-solid-svg-icons"
 import { faGithubAlt, faLinkedinIn } from "@fortawesome/free-brands-svg-icons"
 import { useState } from "react"
+import { FormattedMessage } from "react-intl"
 
 const contacts = [
 	{ item: faEnvelopeOpen, title: "mail", link: "mailto:6y6jl@gmail.com" },
@@ -41,8 +42,9 @@ const Footer = (props) => {
 	return (
 		<div className={style.footerFrame}>
 			<div className={`${containerStyle.mainContainer} ${style.container}`}>
-				<Title even={false} title={"Alexey Basalov"} />
+				<Title even={false} title={<FormattedMessage id="owner.name"/>} />
 			</div>
+			<div className={style.insideContainer}>{mappedContacts}</div>
 		</div>
 	)
 }
