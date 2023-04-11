@@ -20,21 +20,21 @@ const IMAGES = {
 }
 
 const MyProject = (props) => {
-	const { link, active, projectName, project, description, setActive } = props
-	const image = projectName.toLocaleLowerCase()
+	const { active, project,setActive } = props
+	const image = project.name.toLocaleLowerCase()
 	const bgc = { backgroundImage: IMAGES[image] ? IMAGES[image] : `url(${emptyImage})` }
-	const activeStyle = active === projectName
+	const activeStyle = active === project.name
 
 	return (
 		<HeadShake>
-			<div onMouseEnter={() => setActive(projectName)} className={style.project}>
-				<a href={link} className={style.button}>
+			<div onMouseEnter={() => setActive(project.name)} className={style.project}>
+				<a href={project.html_link} className={style.button}>
 					watch
 				</a>
 				<div style={bgc} className={`${style.image} ${activeStyle && style.active}`}></div>
 				<div className={style.descriptionBlock}>
-					<h4 className={style.projectName}>{projectName}</h4>
-					<p style={style.description}>{description}</p>
+					<h4 className={style.projectName}>{project.name}</h4>
+					<p style={style.description}>{project.description}</p>
 				</div>
 			</div>
 		</HeadShake>

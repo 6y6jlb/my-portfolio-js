@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import snImage from "../assets/images/Screenshot_42.jpg"
 import Title from "../common/components/title/Title"
 import containerStyle from "../common/styles/Container.module.scss"
 import { useProjectsStore } from "../state/state"
@@ -23,12 +22,10 @@ const MyProjects = () => {
 			projects.data.map((project, index) => (
 				<MyProject
 					key={index}
-					style={{ backgroundImage: `url(${snImage})` }}
-					projectName={project.name}
 					active={active}
 					setActive={onFocusChange}
-					link={project.html_url}
-					description={project.description}
+					project={project}
+			
 				/>
 			)),
 	]
