@@ -1,5 +1,7 @@
 import { create } from "zustand"
 import { API } from "../api/API"
+import ru from "../translations/ru.js"
+import en from "../translations/en.js"
 
 export const useProjectsStore = create((set) => ({
 	data: [],
@@ -50,4 +52,17 @@ export const useLanguagesStore = create((set, get) => ({
 export const useErrorsStore = create((set) => ({
 	data: [],
 	removeAll: () => set({ data: [] }),
+}))
+
+export const useTranslations = create((set, get) => ({
+	locale: 'en',
+	getTranslations: () => {
+		switch (get().locale) {
+			case 'ru':
+				return ru;
+		
+			default:
+				return en;
+		}
+	}
 }))
