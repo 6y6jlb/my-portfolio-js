@@ -3,6 +3,7 @@ import ReactTypingEffect from "react-typing-effect"
 import bgImage from "../assets/images/face.png"
 import containerStyle from "../common/styles/Container.module.scss"
 import style from "./Main.module.scss"
+import LanguageSwitcher from "../common/languageSwitcher/LanguageSwitcher"
 
 const Main = () => {
 	const bg = {
@@ -49,6 +50,7 @@ const Main = () => {
 				</div>
 				<div className={style.photoBlock} />
 			</div>
+			
 		</div>
 	)
 }

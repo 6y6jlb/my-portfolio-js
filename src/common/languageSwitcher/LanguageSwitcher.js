@@ -1,48 +1,32 @@
 import React from "react"
+import style from './LS.module.scss'
 
 const LanguageSwitcher = (props) => {
-	const translations = {
-		en: {
-			header: "Spring",
-			paragraf: "Hello",
-			"lang-choice": "Choose your language:",
-		},
-		deu: {
-			header: "Frühling",
-			paragraf: "Hallo",
-			"lang-choice": "Wählen Sie Ihre Sprache:",
-		},
-		rus: {
-			header: "Весна",
-			paragraf: "Привет",
-			"lang-choice": "Выберите ваш язык:",
-		},
-	}
 
 	const languages = [
 		{ code: "en", name: "English" },
-		{ code: "rus", name: "Русский" },
-		{ code: "deu", name: "Deutsch" },
+		{ code: "ru", name: "Русский" },
+		{ code: "uk", name: "Ukrainian" },
 	]
 
 	const onChange = (e) => {
-		props.handleChangeLanguage(e.target.className)
+		props.onChange(e.target.className)
 	}
 
-	const options = languages.map((language) => {
-		if (language.code != props.lang) {
+	const options = languages.map((language, i) => {
+		if (language.code !== props.locale) {
 			return (
-				<li onClick={onChange}>
-					<div value={language.code} className={language.code}></div>
+				<li key={i} onClick={onChange}>
+					<div value={language.code} className={style[language.code]}></div>
 				</li>
 			)
 		}
 	})
 
 	return (
-		<div className="lang">
-			<div className={props.lang}></div>
-			<ul class="dropdown">{options}</ul>
+		<div className={style.lang}>
+			<div className={style[props.locale]}></div>
+			<ul class={style.dropdown}>{options}</ul>
 		</div>
 	)
 }
