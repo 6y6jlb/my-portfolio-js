@@ -4,7 +4,7 @@ import ru from "../translations/ru.json"
 import en from "../translations/en.json"
 import uk from "../translations/uk.json"
 import { LANGUAGES } from "../common/config/config"
-import { updatePreselectedLanguage } from "../localStorage/language"
+import { getProjectLanguages, updatePreselectedLanguage, updateProjectLanguages } from "../localStorage/language"
 
 export const useProjectsStore = create((set) => ({
 	data: [],
@@ -26,12 +26,19 @@ export const useLanguagesStore = create((set, get) => ({
 	loading: false,
 	loaded: false,
 	fetch: async (repos) => {
-		const result = {}
-		for (let repoId = 0; repoId < repos.length; repoId++) {
-			const repo = repos[repoId]
-			const response = await API.getRepoLanguges(repo)
-			result[repo] = response.data
+
+		const result = getProjectLanguages();
+		
+		if (!Object.keys(result).length) {
+			for (let repoId = 0; repoId < repos.length; repoId++) {
+				const repo = repos[repoId]
+				const response = await API.getRepoLanguges(repo)
+				result[repo] = response.data
+			}
+		
+			updateProjectLanguages(result)
 		}
+		
 		set({ data: result })
 		set({ loading: false })
 		set({ loaded: true })

@@ -13,15 +13,16 @@ import { useEffect } from "react"
 import { getPreselectedLanguage } from "./localStorage/language"
 
 const App = () => {
-	const translations = useTranslations()
-
+	
 	useEffect(()=>{
 		
 		const preselectedLanguage = getPreselectedLanguage();
 		translations.update(preselectedLanguage);
-
+		
 	},[])
-
+	
+	const translations = useTranslations()
+	
 	return (
 		<IntlProvider
 			messages={translations.getTranslations()}
