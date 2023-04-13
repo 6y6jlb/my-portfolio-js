@@ -3,6 +3,8 @@ import { API } from "../api/API"
 import ru from "../translations/ru.json"
 import en from "../translations/en.json"
 import uk from "../translations/uk.json"
+import { LANGUAGES } from "../common/config/config"
+import { updatePreselectedLanguage } from "../localStorage/language"
 
 export const useProjectsStore = create((set) => ({
 	data: [],
@@ -56,12 +58,32 @@ export const useErrorsStore = create((set) => ({
 }))
 
 export const useTranslations = create((set, get) => ({
-	locale: "en",
+	locale: LANGUAGES.EN,
+	getLocale: () => {
+		return get().locale
+	},
+	update: (value) => {
+		if(get().locale === value) {
+			return
+		} else {
+		switch (value) {
+			case LANGUAGES.RU:
+			case LANGUAGES.EN:
+			case LANGUAGES.UK:
+				set({ locale: value })
+				updatePreselectedLanguage(value)
+				break
+			default:
+				set({ locale: LANGUAGES.EN })
+				updatePreselectedLanguage(LANGUAGES.EN)
+		}
+	}
+	},
 	getTranslations: () => {
 		switch (get().locale) {
-			case "ru":
+			case LANGUAGES.RU:
 				return ru
-			case "uk":
+			case LANGUAGES.UK:
 				return uk
 			default:
 				return en

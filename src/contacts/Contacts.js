@@ -1,10 +1,10 @@
-import style from "./Contacts.module.scss"
-import containerStyle from "../common/styles/Container.module.scss"
-import Title from "../common/components/title/Title"
-import HeadShake from "react-reveal/HeadShake"
-import { useEffect, useState } from "react"
-import { API } from "../api/API"
+import { useState } from "react"
 import { FormattedMessage } from "react-intl"
+import HeadShake from "react-reveal/HeadShake"
+import { API } from "../api/API"
+import Title from "../common/components/title/Title"
+import containerStyle from "../common/styles/Container.module.scss"
+import style from "./Contacts.module.scss"
 
 const Contacts = () => {
 	const [contacts, setContacts] = useState("")
@@ -47,6 +47,7 @@ const Contacts = () => {
 							name={"contacts"}
 							value={contacts}
 							type="text"
+							className={`${style.rounded} ${style.padding} `}
 						/>
 						<label id={"name"}></label>
 						<input
@@ -55,16 +56,17 @@ const Contacts = () => {
 							name={"name"}
 							value={name}
 							type="text"
+							className={`${style.rounded} ${style.padding} `}
 						/>
 						<textarea
 							placeholder={"message"}
 							onChange={(e) => setMessage(e.currentTarget.value)}
 							value={message}
-							className={style.textArea}
+							className={`${style.rounded} ${style.textArea} ${style.padding} `}
 						/>
 						<button
 							disabled={isDisable}
-							className={`${style.button} ${isDisable ? style.buttonActive : ""}`}
+							className={`${style.rounded} ${style.button} ${style.padding} ${isDisable ? style.buttonActive : ""}`}
 						>
 							<FormattedMessage id="buttons.save"/>
 						</button>

@@ -60,11 +60,19 @@
       box-sizing: content-box;
       padding: 2px;
       width: 400px;
-      height: 200px;
+      height: 300px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: stretch;
+      
+      .padding {
+        padding: 6px 12px;
+      }
+
+      .rounded {
+        border-radius: 2px;
+      }
 
       .button {
         border: none;
@@ -82,9 +90,7 @@
       }
 
       :focus {
-
         background-color: $FirstWhiteColor;
-        padding: 2px;
         outline: none;
         border: none;
       }
@@ -112,7 +118,6 @@
 
         &:focus {
           background-color: $FirstWhiteColor;
-          padding: 2px;
         }
       }
 
