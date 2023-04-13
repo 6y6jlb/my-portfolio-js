@@ -1,8 +1,7 @@
 import React from "react"
-import style from './LS.module.scss'
+import style from "./LS.module.scss"
 
 const LanguageSwitcher = (props) => {
-
 	const languages = [
 		{ code: "en", name: "English" },
 		{ code: "ru", name: "Русский" },
@@ -16,19 +15,14 @@ const LanguageSwitcher = (props) => {
 	const options = languages.map((language, i) => {
 		if (language.code !== props.locale) {
 			return (
-				<li key={i} onClick={onChange}>
-					<div value={language.code} className={style[language.code]}></div>
-				</li>
+				<option key={i} value={language.code} onClick={onChange}>
+					<div className={style.item}>{language.name}</div>
+				</option>
 			)
 		}
 	})
 
-	return (
-		<div className={style.lang}>
-			<div className={style[props.locale]}></div>
-			<ul class={style.dropdown}>{options}</ul>
-		</div>
-	)
+	return <select className={style.lang}>{options}</select>
 }
 
 export default LanguageSwitcher
