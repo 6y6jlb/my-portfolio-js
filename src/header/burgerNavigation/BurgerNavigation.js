@@ -1,16 +1,14 @@
-import React, { useState } from "react"
-import style from "./BurgerNavigation.module.scss"
-import { Link } from "react-scroll"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faBars } from "@fortawesome/free-solid-svg-icons/faBars"
-import { FormattedMessage, useIntl } from "react-intl"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import React, { useState } from "react"
+import { FormattedMessage } from "react-intl"
+import { Link } from "react-scroll"
 import LanguageSwitcher from "../../common/components/languageSwitcher/LanguageSwitcher"
-import { useTranslations } from "../../state/state"
+import style from "./BurgerNavigation.module.scss"
 
 const BurgerNavigation = () => {
 	const [isOpen, setIsOpen] = useState(false)
-	const intl = useIntl();
-	const translations = useTranslations();
+
 	return (
 		<div className={style.burgerNavigation}>
 			<div onClick={() => setIsOpen(!isOpen)} className={style.burgerButton}>
@@ -29,7 +27,7 @@ const BurgerNavigation = () => {
 				<Link activeClass={style.active} to="contact" spy={true} smooth={true} offset={1} duration={500}>
 					<FormattedMessage id="navigation.contact" />
 				</Link>
-				<LanguageSwitcher locale={intl.locale} onChange={translations.update}/>
+				<LanguageSwitcher/>
 			</div>
 		</div>
 	)

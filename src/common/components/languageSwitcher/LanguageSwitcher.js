@@ -1,17 +1,19 @@
 import React from "react"
 import style from "./LanguageSwitcher.module.scss"
 import { LANGUAGES } from "../../config/config"
+import { useTranslations } from "../../../state/state"
 
-const LanguageSwitcher = (props) => {
+const LanguageSwitcher = () => {
+	const translations = useTranslations()
 	const languages = [
 		{ code: LANGUAGES.EN, name: "English" },
 		{ code: LANGUAGES.RU, name: "Русский" },
 		{ code: LANGUAGES.UK, name: "Ukrainian" },
 	]
-
+	const locale = translations.getLocale()
 
 	const options = languages.map((language, i) => {
-		const isDisabled = language.code === props.locale
+		const isDisabled = language.code === locale
 		return (
 			<option
 				disabled={isDisabled}
@@ -26,8 +28,8 @@ const LanguageSwitcher = (props) => {
 
 	return (
 		<select
-			onChange={(e) => props.onChange(e.currentTarget.value)}
-			defaultValue={props.locale}
+			onChange={(e) => translations.update(e.currentTarget.value)}
+			value={locale}
 			className={style.lang}
 		>
 			{options}

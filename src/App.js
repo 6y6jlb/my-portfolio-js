@@ -1,16 +1,15 @@
+import { useEffect } from "react"
 import { IntlProvider } from "react-intl"
 import "./App.scss"
 import Contacts from "./contacts/Contacts"
 import Footer from "./footer/Footer"
 import Header from "./header/Header"
 import Languages from "./languages/Languages"
+import { getPreselectedLanguage } from "./localStorage/language"
 import Main from "./main/Main"
 import MyProjects from "./myProjects/MyProjects"
 import RemoteJob from "./remoteJob/RemoteJob"
 import { useTranslations } from "./state/state"
-import { LANGUAGES } from "./common/config/config"
-import { useEffect } from "react"
-import { getPreselectedLanguage } from "./localStorage/language"
 
 const App = () => {
 	
@@ -27,7 +26,6 @@ const App = () => {
 		<IntlProvider
 			messages={translations.getTranslations()}
 			locale={translations.getLocale()}
-			defaultLocale={LANGUAGES.EN}
 		>
 			<div className="App">
 				<Header />
