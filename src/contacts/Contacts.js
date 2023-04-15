@@ -12,7 +12,7 @@ const Contacts = () => {
 		feedbackStore.send()
 	}
 
-	console.log(feedbackStore.data)
+
 	return (
 		<div id={"contact"} className={style.contactsBlock}>
 			<HeadShake>
