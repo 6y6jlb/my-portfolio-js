@@ -1,7 +1,7 @@
 import React from "react"
 import style from "./LanguageSwitcher.module.scss"
 import { LANGUAGES } from "../../config/config"
-import { useTranslations } from "../../../state/state"
+import { useTranslations } from "../../../state/translationStore"
 
 const LanguageSwitcher = () => {
 	const translations = useTranslations()

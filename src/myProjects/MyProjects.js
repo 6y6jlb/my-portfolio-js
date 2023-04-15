@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import Title from "../common/components/title/Title"
 import containerStyle from "../common/styles/Container.module.scss"
-import { useProjectsStore } from "../state/state"
+import { useProjectsStore } from "../state/projectsStore"
 import style from "./MyProjects.module.scss"
 import MyProject from "./myProject/MyProject"
 import { Audio } from "react-loader-spinner"

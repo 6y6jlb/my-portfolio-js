@@ -1,13 +1,17 @@
 import axios from "axios"
 
 export const API = {
-	sendContactsAndMessage: (contacts, name, message) => {
-		return axios.post("https://smtp-nodejs-portfolio-6y6jlb.herokuapp.com/sendMessage", { contacts, name, message })
+	sendContactsAndMessage: ({senderContacts, senderName, body}) => {
+		return axios.post("https://lbas.website:5000/api/notification/email/send", {
+			senderContacts,
+			senderName,
+			body,
+		})
 	},
 	getGitHubRepos: () => {
 		return axios.get("https://api.github.com/users/6y6jlb/repos")
 	},
 	getRepoLanguges(repo) {
 		return axios.get(`https://api.github.com/repos/6y6jlb/${repo}/languages`)
-	}
+	},
 }

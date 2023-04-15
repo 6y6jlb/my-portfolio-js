@@ -9,7 +9,7 @@ import { getPreselectedLanguage } from "./localStorage/language"
 import Main from "./main/Main"
 import MyProjects from "./myProjects/MyProjects"
 import RemoteJob from "./remoteJob/RemoteJob"
-import { useTranslations } from "./state/state"
+import { useTranslations } from "./state/translationStore"
 
 const App = () => {
 	
