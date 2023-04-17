@@ -14,8 +14,10 @@
     "remote.title": "віддалена робота",
     "languages.title": "мови",
     "projects.title": "проекти",
+    "projects.link-to": "дивитися",
     "contacts.title": "контакти",
     "buttons.save": "зберегти",
-    "owner.name": "Алексей Басалов"
+    "owner.name": "Олексій Басалов",
+    "notification.feedback.sended":"Відправлено"
   }
   

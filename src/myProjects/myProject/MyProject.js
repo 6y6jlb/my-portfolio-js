@@ -1,9 +1,11 @@
 import style from "./MyProject.module.scss"
 import HeadShake from "react-reveal/HeadShake"
 import snImage from "../../assets/images/Screenshot_42.jpg"
+import todoImage from "../../assets/images/Screenshot_41.jpg"
 import counterImage from "../../assets/images/Screenshot_40.jpg"
 import portfolioImage from "../../assets/images/Screenshot_39.jpg"
 import emptyImage from "../../assets/images/empty.jpg"
+import { FormattedMessage } from "react-intl"
 
 const PROJECTS = {
 	TODO: "to-do-react",
@@ -14,7 +16,7 @@ const PROJECTS = {
 
 const IMAGES = {
 	[PROJECTS.COUNTER]: `url(${counterImage})`,
-	[PROJECTS.TODO]: `url(${snImage})`,
+	[PROJECTS.TODO]: `url(${todoImage})`,
 	[PROJECTS.PORTFOLIO]: `url(${portfolioImage})`,
 	[PROJECTS.SN]: `url(${snImage})`,
 }
@@ -28,8 +30,8 @@ const MyProject = (props) => {
 	return (
 		<HeadShake>
 			<div onMouseEnter={() => setActive(project.name)} className={style.project}>
-				<a href={project.html_link} className={style.button}>
-					watch
+				<a href={project.html_url} className={style.button}>
+				<FormattedMessage id="projects.link-to" />
 				</a>
 				<div style={bgc} className={`${style.image} ${activeStyle && style.active}`}></div>
 				<div className={style.descriptionBlock}>

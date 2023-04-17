@@ -13,8 +13,9 @@
     "remote.agree": "agree",
     "remote.title": "remote job",
     "languages.title": "languages",
-    "projects.title": "projects",
+    "projects.link-to": "view",
     "contacts.title": "contacts",
     "buttons.save": "save",
-    "owner.name": "Basalov Alexey"
+    "owner.name": "Alexey Basalov",
+    "notification.feedback.sended":"Sent"
 }

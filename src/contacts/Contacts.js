@@ -12,14 +12,15 @@ const Contacts = () => {
 		feedbackStore.send()
 	}
 
-
 	return (
 		<div id={"contact"} className={style.contactsBlock}>
 			<HeadShake>
 				<div className={`${containerStyle.mainContainer} ${style.container}`} action="form">
 					{feedbackStore.loading && (
 						<div className={style.modal}>
-							<div className={style.modalText}>letter sent</div>
+							<div className={style.modalText}>
+								<FormattedMessage id="notification.feedback.sended" />
+							</div>
 						</div>
 					)}
 					<Title even={true} title={<FormattedMessage id="contacts.title" />} />
